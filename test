@@ -4,4 +4,4 @@ Github webhook -> controller -> controller check label -> sends request to provi
 
 provider = bunch of python code that spins up virtual machine or container with github agent and register runner
 
-provider should accept requests from the controller by RPC 
+provider should accept requests from the controller by RPC

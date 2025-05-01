@@ -1,0 +1,20 @@
+github:
+  org: example
+  runner_config:
+    labels:
+      - "self-hosted"
+  webhook_url: https://example.com/webhook
+providers:
+  - name: ec2
+    path:
+    socket_type: unix
+    socket_path: /path/to/provider/unix.sock
+    config_path:
+    default: true
+    match_labels:
+      - "self-hosted"
+    provisioning:
+      type: on-demand
+      min_runners: 1
+      max_runners: 10
+    priority: 1

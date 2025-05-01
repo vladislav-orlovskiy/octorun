@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.11.7  # Use the latest version of ruff
+    hooks:
+      - id: ruff
+        args: [--fix]  # Automatically fix issues if possible
+  - repo: https://github.com/psf/black
+    rev: 23.9.1  # Use the latest version of black
+    hooks:
+      - id: black
+        args: [--line-length=88]
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: ''
+    hooks:
+      - id: isort
+        args: [--profile=black]
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0  # Use the latest version of flake8
+    hooks:
+      - id: flake8
+        args: [--max-line-length=88]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0  # Use the latest version of pre-commit-hooks
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-json

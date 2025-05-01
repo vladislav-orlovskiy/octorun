@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "my-python-project"
+version = "0.1.0"
+description = "A python project that controlls the github actions runners on demand provision"
+authors = ["Uladzislau Orlovskiy <painanguishagony@gmail.com"]
+license = "MIT"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytoml = "^0.1.21"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"

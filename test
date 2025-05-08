@@ -1,7 +1,0 @@
-
-
-Github webhook -> controller -> controller check label -> sends request to provider -> provider register runner -> github job picked up by runner -> job ends -> runner dies
-
-provider = bunch of python code that spins up virtual machine or container with github agent and register runner
-
-provider should accept requests from the controller by RPC

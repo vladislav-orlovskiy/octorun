@@ -1,5 +1,6 @@
 [tool.poetry]
-name = "my-python-project"
+name = "octorun"
+python = "3.13"
 version = "0.1.0"
 description = "A python project that controlls the github actions runners on demand provision"
 authors = ["Uladzislau Orlovskiy <painanguishagony@gmail.com"]
@@ -15,3 +16,5 @@ pytoml = "^0.1.21"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
+pyrpc = "^0.4.0"
+ghapi = "^1.0.6"

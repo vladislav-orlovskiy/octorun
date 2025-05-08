@@ -1,20 +1,13 @@
+#Optional block
+octorun-controller:
+  name: octorun
+  webhook_port: 8080
+
+#mandatory(can be set by env variables)
 github:
   org: example
-  runner_config:
-    labels:
-      - "self-hosted"
-  webhook_url: https://example.com/webhook
+  listen_labels: ["self-hosted", "foo-bar-baz"]
 providers:
-  - name: ec2
-    path:
-    socket_type: unix
-    socket_path: /path/to/provider/unix.sock
-    config_path:
-    default: true
-    match_labels:
-      - "self-hosted"
-    provisioning:
-      type: on-demand
-      min_runners: 1
-      max_runners: 10
-    priority: 1
+  - name: test
+    connection_uri: "tcp://127.0.0.1:10000"
+    labels: ["self-hosted"]
